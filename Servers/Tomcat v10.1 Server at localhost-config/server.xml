@@ -59,13 +59,13 @@
          and responses are returned. Documentation at :
          HTTP Connector: /docs/config/http.html
          AJP  Connector: /docs/config/ajp.html
-         Define a non-SSL/TLS HTTP/1.1 Connector on port 8081
+         Define a non-SSL/TLS HTTP/1.1 Connector on port 2525
     -->
-    <Connector connectionTimeout="20000" maxParameterCount="1000" port="8081" protocol="HTTP/1.1" redirectPort="8443"/>
+    <Connector connectionTimeout="20000" maxParameterCount="1000" port="2525" protocol="HTTP/1.1" redirectPort="8443"/>
     <!-- A "Connector" using the shared thread pool-->
     <!--
     <Connector executor="tomcatThreadPool"
-               port="8081" protocol="HTTP/1.1"
+               port="2525" protocol="HTTP/1.1"
                connectionTimeout="20000"
                redirectPort="8443"
                maxParameterCount="1000"
@@ -142,7 +142,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="BootMVC-Proj01-ShowingHomePage" path="/BootMVC-Proj01-ShowingHomePage" reloadable="true" source="org.eclipse.jst.jee.server:BootMVC-Proj01-ShowingHomePage"/></Host>
+      <Context docBase="BootMVC-proj03-SeasonFinder" path="/BootMVC-proj03-SeasonFinder" reloadable="true" source="org.eclipse.jst.jee.server:BootMVC-proj03-SeasonFinder"/></Host>
     </Engine>
   </Service>
 </Server>
